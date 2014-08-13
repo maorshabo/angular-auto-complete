@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="autoComplete">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular Auto complete</title>
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="src/autoComplete.css"/>
+</head>
+<body>
+    <div ng-controller="mainController as main">
+        {{ main.test }}
+        <auto-complete title="Remove Item" list="main.tagsList" selected="main.selectedList" placeholder="Add item"></auto-complete>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="src/autoComplete.js"></script>
+</body>
+</html>

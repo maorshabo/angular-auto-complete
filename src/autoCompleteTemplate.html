@@ -1,0 +1,11 @@
+<div>
+    <div class="autoCompleteContainer">
+        <div class="item pull-left" data-ng-repeat="selectedItem in selectedItems"><span><img data-ng-src="{{ selectedItem.picture.data.url }}" /> {{ selectedItem.name }} </span><a data-ng-click="removeItem(selectedItem)" title="{{ titleText }}"><i class="fa fa-plus fa-rotate-45"></i></a></div>
+        <input type="text" class="form-control autoCompleteInput" placeholder="{{ placeholder }}" data-ng-model="itemInput" />
+    </div>
+    <ul data-ng-show="itemInput" class="itemsList list-unstyled">
+        <li class="listRow" data-ng-repeat="item in items | orderBy: 'item.name' | filter:itemInput" data-ng-click="addItem(item)">
+            {{ item.name }}
+        </li>
+    </ul>
+</div>
